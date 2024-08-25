@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Design | Abdul Rehman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      header {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 75px;
+        padding-right: 75px;
+        position: fixed;
+        width: calc(100% - 140px);
+        backdrop-filter: blur(10px);
+        z-index: 99;
+      }
+      header .header_logo {
+        padding-top: 15px;
+      }
+      header ul {
+        text-align: left;
+      }
+      header ul li {
+        display: inline-block;
+        margin: 0 12px;
+      }
+      header ul a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        font-weight: 700;
+        color: #0a2753;
+      }
+      header ul li:nth-child(1) a {
+        color: #20bcf4;
+      }
+      header ul li.sign_in_btn {
+        border-radius: 30px;
+        padding: 8px 18px;
+        background-color: #20bcf4;
+      }
+      header ul li.sign_in_btn {
+        margin: 0;
+      }
+      header ul li.sign_in_btn a {
+        color: white;
+      }
+      header ul li.sign_in_btn a svg {
+        padding-right: 4px;
+      }
+      /* steps */
+      section.steps {
+        padding: 110px 75px;
+        padding-bottom: 80px;
+        text-align: center;
+      }
+      .steps .steps_data {
+        background: url(https://cdn.fexpink.com/smmlive/images/how-it-works-bg.webp),
+          linear-gradient(to right, #19b4ea, #20bcf4, #19b4ea);
+        padding: 40px 100px;
+        padding-bottom: 150px;
+        border-radius: 30px;
+        color: white;
+        background-position: center;
+      }
+      .steps .steps_data h4 {
+        font-size: 24px;
+      }
+      .steps .steps_data h2 {
+        font-size: 45px;
+        line-height: 51px;
+      }
+      .steps .steps_data p {
+        line-height: 24px;
+        padding-top: 11px;
+      }
+      .steps .steps-list {
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-90px);
+        padding: 0 20px;
+      }
+      .steps-list .steps-step {
+        background-color: white;
+        border-radius: 10px;
+        padding: 40px 20px;
+        padding-top: 70px;
+        margin: 0 11px;
+        box-shadow: 0 5px 10px #e2e2e2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.2s ease;
+      }
+      .steps-list .steps-step div {
+        border-radius: 50%;
+        height: 75px;
+        transform: translateY(-135%);
+        width: 75px;
+        background-color: #f1f1f1;
+        color: #0a2753;
+        font-size: 17px;
+        line-height: 22px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        position: absolute;
+        transition: all 0.5s ease;
+      }
+      .steps-list .steps-step:hover {
+        scale: 1.009;
+      }
+      .steps-list .steps-step:hover div {
+        scale: 1.1;
+        border: 1.5px solid #fb135d;
+        transform: translateY(-124%);
+      }
+      .steps-list .steps-step h3 {
+        color: #0a2753;
+        padding-top: 18px;
+        padding-bottom: 7px;
+        font-weight: 800;
+      }
+      .steps-list .steps-step p {
+        font-size: 14px;
+        line-height: 17px;
+        color: #676767;
+      }
+      .steps button {
+        color: white;
+        font-weight: 700;
+        transform: translateY(-45px);
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        padding: 11px 35px;
+        background-color: #20bcf4;
+        box-shadow: 0 3px 15px #20bbf459;
+      }
+      /* unlocking scuccess */
+      section.success .success1 {
+        text-align: center;
+        padding: 120px 220px;
+        padding-bottom: 25px;
+      }
+      section.success h2 {
+        font-size: 44px;
+        font-weight: 700;
+        color: #0a2753;
+        line-height: 55px;
+      }
+      section.success h2 span {
+        color: #20bcf4;
+      }
+      section.success p {
+        color: #676767;
+        padding-top: 8px;
+      }
+      /* success items */
+
+      section.success .success_items {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 75px;
+      }
+      section.success .success_data .item1 {
+        height: 160px;
+        width: 365px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background-image: url(https://cdn.fexpink.com/smmlive/images/excellence-smm-panel-services.webp);
+        background-repeat: no-repeat;
+        background-position: right;
+        transition: all 0.3s ease;
+        padding: 20px;
+        padding-bottom: 0;
+        margin: 32px 0;
+      }
+      section.success .success_data .item1:hover {
+        transform: scale(1.02) rotate(-1deg);
+      }
+      section.success .success_data .item1 h3 {
+        font-size: 18px;
+        color: #212529;
+        font-weight: 700;
+        line-height: 19px;
+      }
+      section.success .success_data .item1 p {
+        color: #676767;
+        font-size: 14px;
+        width: 80%;
+        line-height: 20px;
+      }
+      section.success .right .item1 {
+        background-image: url(https://cdn.fexpink.com/smmlive/images/approach-smmpanel.webp);
+        background-position: left;
+      }
+      section.success .right .item1 h3 {
+        text-align: right;
+      }
+      section.success .right .item1 p {
+        text-align: right;
+        padding-left: 50px;
+        padding-right: 0;
+        float: right;
+      }
+      .success_items {
+        position: relative;
+      }
+      .success_items img {
+        position: absolute;
+        margin: 0 auto;
+        text-align: center;
+        zoom: 0.8;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      /* Hamburger Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 4px;
+        transition: 0.4s;
+      }
+      @media screen and (max-width: 804px) {
+        header{
+          padding-left: 15px;
+          padding-right: 25px;
+          position: relative;
+          width: 100vw;
+          box-sizing: border-box;
+        }
+        header ul{
+          position: fixed;
+          top: 70px;
+          width: 100vw;
+          box-sizing: border-box;
+          display: none;
+          align-items: center;
+          flex-direction: column;
+          background-color: white;
+          padding: 20px 0;
+          z-index: 99;
+          gap: 8px;
+        }
+        header ul.active {
+          display: flex;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .success1{
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .success_items{
+          flex-direction: column !important;
+          align-items: center;
+        }
+        .success_items img{
+          display: none !important;
+        }
+        section.steps{
+          padding: 110px 5px;
+        }
+        .steps-list{
+          flex-direction: column;
+          gap: 55px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="header_logo" href=""
+        ><img src="https://cdn.fexpink.com/smmlive/images/main-logo.webp" width="194" alt="logo"
+      /></a>
+      <ul>
+        <li><a href="#">Sign in</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">API</a></li>
+        <li class="sign_in_btn">
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M254 136a6 6 0 0 1-6 6h-18v18a6 6 0 0 1-12 0v-18h-18a6 6 0 0 1 0-12h18v-18a6 6 0 0 1 12 0v18h18a6 6 0 0 1 6 6m-57.41 60.14a6 6 0 1 1-9.18 7.72C166.9 179.45 138.69 166 108 166s-58.89 13.45-79.41 37.86a6 6 0 0 1-9.18-7.72C35.14 177.41 55 164.48 77 158.25a66 66 0 1 1 62 0c22 6.23 41.86 19.16 57.59 37.89M108 154a54 54 0 1 0-54-54a54.06 54.06 0 0 0 54 54"
+              ></path>
+            </svg>
+            Sign up
+          </a>
+        </li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <!-- Unlocking Success -->
+    <section class="success">
+      <div class="success1">
+        <h2>Unlocking Our Success: Insights with <span>SMMLive</span></h2>
+        <p>
+          Elevate your social media presence with the ultimate SMM panel
+          provider – SMMLive. Discover an array of compelling reasons that make
+          us the top choice for businesses and individuals alike. Unleash the
+          power of effective social media strategies with our unparalleled
+          services. Explore the difference with SMMLive,your premier destination
+          for SMM panels.
+        </p>
+      </div>
+      <div class="success_items">
+        <img
+          src="https://cdn.fexpink.com/smmlive/images/smmpanel-expert.webp"
+          alt=""
+        />
+        <div class="left success_data">
+          <div class="item1">
+            <h3>Established Excellence</h3>
+            <p>
+              With a wealth of experience, SMMLive is recognized as the leading
+              SMM panel, consistently delivering exceptional results over the
+              years.
+            </p>
+          </div>
+          <div class="item1">
+            <h3>Established Excellence</h3>
+            <p>
+              With a wealth of experience, SMMLive is recognized as the leading
+              SMM panel, consistently delivering exceptional results over the
+              years.
+            </p>
+          </div>
+          <div class="item1">
+            <h3>Established Excellence</h3>
+            <p>
+              With a wealth of experience, SMMLive is recognized as the leading
+              SMM panel, consistently delivering exceptional results over the
+              years.
+            </p>
+          </div>
+        </div>
+        <div class="right success_data">
+          <div class="item1">
+            <h3>Customer-Focused Approach</h3>
+            <p>
+              We prioritize your needs, customizing our services to align with
+              your specific goals and guaranteeing a personalized experience
+            </p>
+          </div>
+          <div class="item1">
+            <h3>Customer-Focused Approach</h3>
+            <p>
+              We prioritize your needs, customizing our services to align with
+              your specific goals and guaranteeing a personalized experience
+            </p>
+          </div>
+          <div class="item1">
+            <h3>Customer-Focused Approach</h3>
+            <p>
+              We prioritize your needs, customizing our services to align with
+              your specific goals and guaranteeing a personalized experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Steps Page -->
+    <section class="steps">
+      <div class="steps_data">
+        <h4>How it works?</h4>
+        <h2>
+          Embark on Your Success Journey with SMMLive in Four Simple Steps
+        </h2>
+        <p>
+          Ready to kickstart your success story? At SMMLive, we make it
+          effortless to achieve your goals. With our streamlined process, you
+          can take the first steps towards success in just four easy steps. From
+          consultation to implementation, our expert team is here to guide you
+          every step of the way. Start your journey to success with SMMLive
+          today!
+        </p>
+      </div>
+      <div class="steps-list">
+        <div class="steps-step">
+          <div>01<br />Step</div>
+          <img
+            src="https://cdn.fexpink.com/smmlive/images/create-smmlive-account-best-smm-panel.webp"
+            alt=""
+          />
+          <h3>Create Your Account</h3>
+          <p>
+            Create Your Account by Entering Your Username, Email, and Password -
+            Begin Your Journey to Success
+          </p>
+        </div>
+        <div class="steps-step">
+          <div>01<br />Step</div>
+          <img
+            src="https://cdn.fexpink.com/smmlive/images/addfund-to-smm-panel.webp"
+            alt=""
+          />
+          <h3>Create Your Account</h3>
+          <p>
+            Create Your Account by Entering Your Username, Email, and Password -
+            Begin Your Journey to Success
+          </p>
+        </div>
+        <div class="steps-step">
+          <div>01<br />Step</div>
+          <img
+            src="https://cdn.fexpink.com/smmlive/images/place-order-on-smmpanel.webp"
+            alt=""
+          />
+          <h3>Create Your Account</h3>
+          <p>
+            Create Your Account by Entering Your Username, Email, and Password -
+            Begin Your Journey to Success
+          </p>
+        </div>
+        <div class="steps-step">
+          <div>01<br />Step</div>
+          <img
+            src="https://cdn.fexpink.com/smmlive/images/enjoy-smm-panel.webp"
+            alt=""
+          />
+          <h3>Create Your Account</h3>
+          <p>
+            Create Your Account by Entering Your Username, Email, and Password -
+            Begin Your Journey to Success
+          </p>
+        </div>
+      </div>
+      <button type="button">Create an Account</button>
+    </section>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector("header ul");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

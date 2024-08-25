@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Abdul Rehman</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #3750eb;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      main {
+        display: flex;
+        width: 100%;
+        max-width: 1100px;
+        height: 80%;
+        border-radius: 70px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      body::after {
+        content: "";
+        background-color: #c5d4fd;
+        width: 100vw;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+      .left {
+        width: 45%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .right {
+        flex: 1;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3rem;
+        border-left: 1px solid #e0e0e0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .right-content {
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #03137a;
+        font-family: "DM Serif Text", serif;
+        padding-top: 40px;
+        animation: fadeInDown 0.6s ease-in-out;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: #555;
+        font-size: 1.1rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        animation: fadeInUp 0.6s ease-in-out;
+      }
+
+      label {
+        font-size: 1rem;
+        color: #555;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        padding: 12px;
+        border: 1px solid #e8e8e8;
+        border-radius: 8px;
+        background-color: #edf0f5;
+        color: #333;
+        font-size: 1rem;
+        transition: border 0.3s ease;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        border: 1px solid #3750eb;
+        outline: none;
+        background-color: #fff;
+      }
+
+      input[type="text"] {
+        margin-bottom: 24px;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      .form_bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+      }
+
+      button {
+        padding: 16px;
+        border: none;
+        border-radius: 8px;
+        background-color: #3750eb;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #2b3db6;
+        transform: translateY(-2px);
+      }
+
+      a {
+        color: #3750eb;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #2b3db6;
+        text-decoration: underline;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .left,
+        .right {
+          width: 100%;
+          height: auto;
+        }
+
+        .right-content {
+          padding: 1.5rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 0.875rem;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+          padding: 10px;
+        }
+
+        button {
+          padding: 10px;
+          font-size: 0.875rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 0.75rem;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+          padding: 8px;
+        }
+
+        button {
+          padding: 8px;
+          font-size: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="left">
+        <img
+          src="https://cdn.vectorstock.com/i/500p/51/85/secure-login-form-page-with-password-on-computer-vector-51805185.jpg"
+          width="440px"
+          alt=""
+        />
+      </div>
+      <div class="right">
+        <div class="right-content">
+          <h2>Welcome Back</h2>
+          <p>Enter your email and password to access your account.</p>
+          <form action="">
+            <label for="mail">Email</label>
+            <input type="text" id="mail" placeholder="Enter your email" />
+            <label for="pass">Password</label>
+            <input
+              type="password"
+              id="pass"
+              placeholder="Enter your password"
+            />
+            <div class="form_bottom">
+              <div>
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </div>
+              <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Sign in Now!</button>
+          </form>
+        </div>
+        <p>Don't have an account? <a href="#">Create Account</a></p>
+      </div>
+    </main>
+  </body>
+</html>

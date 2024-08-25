@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cheaky Snail | Abdul Rehman</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Potta+One&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        color: white;
+        font-family: "Potta One", system-ui;
+      }
+      body {
+        overflow-x: hidden;
+      }
+      /* Header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        padding: 14px 40px;
+      }
+      header nav {
+        display: flex;
+        align-items: center;
+      }
+      header ul {
+        display: flex;
+        list-style: none;
+      }
+      header ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        padding: 0 15px;
+      }
+      header button {
+        background-color: #5a25c4;
+        border-radius: 40px;
+        padding: 13px 30px;
+        border: 2px solid #5a25c4;
+        font-size: 23px;
+        cursor: pointer;
+      }
+      /* Home */
+      .home {
+        height: 85vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(0, 0, 36);
+        background-image: url(https://uploads-ssl.webflow.com/6216ab26868a63b61e56e38b/6216abfd8fb75781e0b9ee54_hero-bg.2def6946391161f82c64.png);
+        background-position: center;
+        background-size: cover;
+        padding: 0 110px;
+      }
+      .home h1 {
+        font-size: 100px;
+        line-height: 96px;
+        max-width: 420px;
+      }
+      .home p {
+        font-family: "Glory", sans-serif;
+        font-size: 25px;
+        line-height: 34px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        margin-top: 20px;
+      }
+      .home button {
+        background-color: white;
+        color: black;
+        border-radius: 40px;
+        padding: 10px 27px;
+        border: 2px solid white;
+        font-size: 27px;
+        cursor: pointer;
+      }
+      .mint-btn {
+        background-color: transparent !important;
+        color: white !important;
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px -12px inset,
+          rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+      }
+      .home h5 {
+        font-size: 28px;
+        margin-top: 15px;
+      }
+      .home img {
+        transition: all 0.2s ease;
+      }
+      .home img:hover {
+        scale: 1.1;
+        transform: rotate(5deg);
+      }
+      /* About */
+      .about {
+        display: flex;
+        justify-content: center;
+        padding: 50px 20px;
+        padding-bottom: 200px;
+        background-color: #262f88;
+        position: relative;
+      }
+      .about div {
+        background-color: #401990;
+        background-image: linear-gradient(
+          45.210000000000036deg,
+          #261150,
+          #401990 100%,
+          #fff
+        );
+        padding: 30px;
+        border-radius: 30px;
+      }
+      .about h2 {
+        font-size: 50px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+      .about p {
+        font-family: "Glory", sans-serif;
+        font-size: 25px;
+        line-height: 34px;
+        margin-bottom: 25px;
+        font-weight: 700;
+      }
+      .about img {
+        position: absolute;
+        bottom: 50px;
+        right: 65px;
+        transform: rotate(-12deg);
+        width: 280px;
+      }
+      /* Media Queries */
+      @media (max-width: 1024px) {
+        header {
+          padding: 14px 20px;
+        }
+        header ul li a {
+          font-size: 20px;
+          padding: 0 10px;
+        }
+        header button {
+          font-size: 20px;
+          padding: 10px 20px;
+        }
+        .home {
+          padding: 0 40px;
+        }
+        .home h1 {
+          font-size: 80px;
+          line-height: 80px;
+        }
+        .home p,
+        .home button {
+          font-size: 20px;
+        }
+        .home h5 {
+          font-size: 22px;
+        }
+      }
+      /* Hamburger Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px;
+        transition: 0.4s;
+      }
+      @media (max-width: 768px) {
+        header ul {
+          flex-direction: column;
+          position: absolute;
+          top: 90px;
+          right: 0;
+          width: 100%;
+          background-color: black;
+          display: none;
+          text-align: center;
+        }
+        header ul li {
+          margin: 15px 0;
+        }
+        header ul.active {
+          display: flex;
+        }
+        .hamburger {
+          display: flex;
+        }
+        header button {
+          font-size: 18px;
+          padding: 10px 20px;
+        }
+        .home {
+          flex-direction: column;
+          padding: 0 20px;
+          text-align: center;
+        }
+        .home h1 {
+          font-size: 60px;
+          line-height: 60px;
+          max-width: none;
+        }
+        .home img {
+          margin-top: 20px;
+          width: 80%;
+        }
+        .about {
+          flex-direction: column;
+        }
+        .about img {
+          position: relative;
+          bottom: 0;
+          right: 0;
+          margin: 0 auto;
+          margin-top: 20px;
+          transform: none;
+          width: 80%;
+        }
+      }
+      @media (max-width: 480px) {
+        header {
+          padding: 14px 10px;
+        }
+        header ul li a {
+          font-size: 18px;
+        }
+        header button {
+          font-size: 16px;
+        }
+        .home h1 {
+          font-size: 40px;
+          line-height: 40px;
+        }
+        .home p,
+        .home button {
+          font-size: 16px;
+        }
+        .home h5 {
+          font-size: 18px;
+        }
+        .about h2 {
+          font-size: 30px;
+        }
+        .about p {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://uploads-ssl.webflow.com/6216ab26868a63b61e56e38b/6216ae13589224a0c1fbc5c1_rShgdj8p0Yama.png"
+        width="150"
+        alt=""
+      />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">How to Buy</a></li>
+          <li><a href="#">Roadmap</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+        <button type="button">Connect Wallet</button>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+    <main>
+      <section class="home">
+        <div>
+          <h1>Cheeky Snails</h1>
+          <p>
+            Cheeky snails is a collection of 7777 wacky little beings, randomly
+            generated from over 250 hand drawn traits.
+          </p>
+          <button type="button">Explore Us</button>
+          <button type="button" class="mint-btn">Mint Now</button>
+          <h5>Mint Active!</h5>
+        </div>
+        <img
+          src="https://uploads-ssl.webflow.com/6216ab26868a63b61e56e38b/6216ae12b1c0876957938fa3_hero-snail-img.dcc644fdcffdc03cfc68-p-500.png"
+          alt=""
+        />
+      </section>
+      <section class="about">
+        <div>
+          <h2>About the project</h2>
+          <p>
+            After months of hard work and gathering data, our cheeky snails are
+            ready and lined up on their starting position, waiting on your sign
+            to begin the race. Each snail is a unique combination of skin, eyes,
+            mouth, shell and special object beneath and above!
+          </p>
+          <p>
+            All of the snails are cheeky, but some are cheekier than others.
+            That depends on the rarity of the traits it has. Some have lava
+            skin, and some have a rocket built on the shell. Some are with
+            awesome sunglasses, while others smoke some straaange cigarettes.
+            Hmm… most of them are warm-hearted and cheerful, with a very few
+            exceptions that are remarkably bad! As they are the most persistent
+            creatures, snails prevail in almost every habitat we know. They are
+            out in the garden, city, jungle, forest, field, river bank, desert,
+            and even Antarctica and space! Some mysterious sources say they even
+            exist on the b l o c k c h a i n...
+          </p>
+          <p>
+            The race starts as soon as our cheeky snails find their new owners.
+            Treat them with respect, and they might surprise you with something
+            from under their shell!
+          </p>
+        </div>
+        <img
+          src="https://uploads-ssl.webflow.com/6216ab26868a63b61e56e38b/6216ae13c250b16612b66fb8_carousel-6.b557ac4a3f7849dfbaf5.png"
+          alt=""
+        />
+      </section>
+    </main>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector("header ul");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
