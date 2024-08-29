@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="tag">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            var entries = [
+            {label : 'HTML5'},
+            {label : 'CSS3'},
+            {label : 'MangoDb'},
+            {label : 'FRAMEWORKS'},
+            {label : 'ReactJs'},
+            {label : 'ANIMATIONS'},
+            {label : 'Bootstrap'},
+            {label : 'Visual Studio'},
+            {label : 'Mongoose'},
+            {label : 'JAVASCRIPT'},
+            {label : 'JQUERY'},
+            {label : 'EXPRESS'},
+            {label : 'XML'},    
+            {label : 'PYTHON'},
+            {label : 'DJANGO'},
+            {label : 'MySQL'},
+            {label : 'RUBY'},
+            {label: 'Keyframes'},
+            {label : 'NODE JS'},
+            {label : 'Express'},
+            {label : 'BABLE'},
+            {label : 'C'},
+            {label : 'C++'},
+            {label : 'C#'},
+            {label : 'Visual Basic'},
+            {label : 'Pascal'},
+            {label : 'Cobal'},
+            {label : 'Programming'},
+            {label : 'Cuscal'},
+            {label : 'Cold Fusion'},
+            {label : 'Perl'},
+            {label : 'Switch Apple'},
+            {label : 'Algol'},
+            {label : 'Visual Foxpro'},
+            {label : 'Rehman'},
+            {label : 'Rebol'},
+            {label : 'Action Script'},
+            {label : 'Sheet'}
+            ];
+        var settings = {
+            entries: entries,
+            radius: '70%',
+            radiusMin: 75,
+            byDraw: true,
+            bgColor: 'transparent',
+            opacityOver: 1.00,
+            opacityOut: '0.05',
+            opacitySpeed: 4,
+            fov: 300,
+            speed: 1,
+            fontSize: '18',
+            fontColor: '#66FCF1',
+            fontStyle: 'normal',
+            fontSretch: 'normal',
+            fontFamily: 'Open Sans, sans-serif',
+            fontToUppercase: true
+
+        };
+        $('#tag').svg3DTagCloud(settings)      
+        })
+    </script>
+<script src="script2.js"></script>
+</body>
+
+</html>

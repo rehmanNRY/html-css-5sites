@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    display: flex;
+    height: 70px;
+    line-height: 70px;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 40px;
+    z-index: 99;
+}
+header label a {
+    font-weight: 800;
+    font-size: 33px;
+    color: #FF7C52;
+    margin-left: 40px;
+}
+header ul{
+    margin: 0 335px;
+    position: absolute;
+}
+header ul li {
+    display: inline-block;
+    margin: 0 16px;
+}
+header ul li a {
+    color: white;
+}
+header ul li a:hover {
+    color: #FF7C52;
+    text-decoration: underline;
+}
+header ul li:nth-child(1) a {
+    font-weight: 500;
+}
+header .right button {
+    padding: 11px 25px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #FF7C52;
+    background-color: #FF7C52;
+    background-image: linear-gradient(45deg, #FF7C52 76%, #f6ffeb 100%);
+    margin: 0 5px;
+}
+header .right button:nth-child(1){
+    background-color: transparent;
+    background-image: none;
+}
+header .right button:nth-child(1):hover{
+    background-color: #FF7C52;
+    background-image: linear-gradient(45deg, #FF7C52 76%, #f6ffeb 100%);
+}
+header .right button:hover{
+    background-color: transparent;
+    background-image: none;
+}
+/* Home */
+.home {
+    height: 96vh;
+    background-color: white;
+    text-align: center;
+}
+.home .home_left {
+    float: left;
+    height: 96vh;
+    width: 49.6vw;
+    text-align: left;
+}
+.home .home_left h1 {
+    padding-top: 150px;
+    padding-left: 40px;
+}
+.home .home_left button {
+    padding: 11.5px 22px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    margin-top: 50px;
+    margin-left: 40px;
+    cursor: pointer;
+    border: none;
+}
+.home .home_left button.home_btn2 {
+    margin-left: 10px;
+    max-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    position: absolute;
+    background-color: #FF7C52;
+    outline: none;
+    margin-top: -47px;
+    margin-left: 205px;
+}
+.home .home_left button.home_btn2 i {
+    font-size: 26px;
+}
+.home .home_left p {
+    padding-left: 40px;
+    margin-top: 35px;
+    padding-right: 40px;
+}
+.home .home_left h1,
+.home .home_left h1 span {
+    text-align: left;
+    font-size: 74px;
+    line-height: 75px;
+    font-family: 'Salsa', cursive;
+}
+.home_left h1 span,
+.home .home_left p span {
+    font-style: italic;
+    color: #FF7C52;
+    text-decoration: underline;
+}
+.home .home_left p span {
+    color: black;
+}
+.home .home_left img.circle_img {
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+.home .home_left img.baba_img {
+    position: absolute;
+    margin-left: -155px;
+    margin-top: 180px;
+}
+.home .home_img {
+    height: 96vh;
+    width: 49vw;
+    float: right;
+    background-size: cover;
+    background-position: top center;
+    background-color: white;
+}
+.home_img .home_right {
+    width: 180px;
+    height: 210px;
+    margin: 0 auto;
+    margin-top: 90px;
+    background-color: white;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home_r_t {
+    float: right;
+    text-align: right;
+    font-size: 30px;
+    line-height: 33px;
+    color: white;
+    margin-right: 30px;
+    margin-top: 50px;
+}
+.home_r_t h4 {
+    color: black;
+    margin-right: 6px;
+    font-family: 'Salsa', cursive;
+}
+.home_r_t span {
+    font-family: 'Salsa', cursive;
+    color: rgb(255, 0, 0);
+    font-size: 50px;
+    position: absolute;
+}
+.home_imgs {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -43px;
+    margin-left: 20px;
+}
+.home_imgs img {
+    border-top: 7px solid white;
+    border-left: 7px solid white;
+    border-right: 7px solid white;
+    margin: 0 5px;
+}
+.girl_pic_home {
+    position: absolute;
+    height: 740px;
+    bottom: -36px;
+    right: 38px;
+}
+.girl_pic_home2 {
+    right: 32px;
+    filter: blur(5px);
+}
+/* Social kit */
+.social_box {
+    position: absolute;
+    right: 0;
+    margin-top: 170px;
+    z-index: 1;
+}
+.social_box ul li {
+    list-style: none;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 8px 14px;
+}
+.social_box li a {
+    font-size: 24px;
+    color: black;
+}
+/* BANNER */
+.banner {
+    padding: 90px 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+h1.title_text {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 65px;
+    color: white;
+}
+h1.title_text span {
+    color: #FF7C52;
+}
+h1.title_text span.text_underline {
+    text-decoration: underline;
+}
+p.para_text {
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: 200;
+    padding: 25px 0;
+    color: white;
+}
+.banner button {
+    padding: 10px 17px;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 2px solid #FF7C52;
+    background-color: #FF7C52;
+    background-image: linear-gradient(45deg, #FF7C52 70%, #fffff8 100%);
+    cursor: pointer;
+}
+.banner button:hover {
+    transition-duration: .4s;
+    color: #FF7C52;
+    background: transparent;
+}
+/* Clients */
+.clients {
+    text-align: center;
+    padding: 105px 0;
+    background-color: #fbfbfb;
+}
+.clients h1 {
+    padding-bottom: 10px;
+    font-size: 35px;
+    font-weight: 700;
+}
+.clients p {
+    font-size: 18px;
+    font-weight: 400;
+}
+.clients .client {
+    margin-top: 30px;
+    padding: 0 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.clients .client div {
+    padding: 36px 10px;
+    border-radius: 10px;
+    width: 250px;
+}
+.clients .client div p {
+    padding-top: 16px;
+    padding-bottom: 20px;
+    font-size: 17px;
+}
+.clients .client div h4 {
+    font-weight: 600;
+}
+.clients .client div span i {
+    font-weight: 600;
+    padding-right: 6px;
+    color: #ffd32a;
+    font-size: 20px;
+}
